@@ -1,0 +1,20 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    venv,
+    *.egg-info,
+    scripts
+
+extend-ignore =
+    # allow `elif` block
+    RET505,
+    # allow `else` block
+    RET506
+
+per-file-ignores =
+    __init__.py: F401, F403
+
+max-line-length = 79
+max-complexity = 10
+
