@@ -1,6 +1,6 @@
-from pathlib import Path
 import os
 import re
+from pathlib import Path
 
 db_regex = (
     r"^(?P<db_engine>.*):\/{2}"
@@ -51,10 +51,7 @@ if not SECRET_KEY:
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "0.0.0.0",
-    "localhost"
-]
+ALLOWED_HOSTS = ["0.0.0.0", "localhost"]
 
 
 INSTALLED_APPS = [
@@ -104,16 +101,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
     },
 ]
 
