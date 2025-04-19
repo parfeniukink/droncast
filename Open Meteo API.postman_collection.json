@@ -1,0 +1,719 @@
+{
+	"info": {
+		"_postman_id": "df3182a5-3b4c-4440-b1e5-2c5dbf282cce",
+		"name": "Open Meteo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18724720"
+	},
+	"item": [
+		{
+			"name": "Temperature",
+			"item": [
+				{
+					"name": "temperature_850hPa, dew_point_850hPa~ 1.5 km above sea level",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&current=temperature_850hPa,dew_point_850hPa&hourly=temperature_850hPa,dew_point_850hPa&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "current",
+									"value": "temperature_850hPa,dew_point_850hPa"
+								},
+								{
+									"key": "hourly",
+									"value": "temperature_850hPa,dew_point_850hPa"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "temperature_2m,dew_point_2m above ground",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&current=temperature_2m,dew_point_2m&hourly=temperature_2m,dew_point_2m&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "current",
+									"value": "temperature_2m,dew_point_2m"
+								},
+								{
+									"key": "hourly",
+									"value": "temperature_2m,dew_point_2m"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "temperature_1000hPa, dew_point_1000hPa ~ 100m above sea level",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&current=temperature_1000hPa,dew_point_1000hPa&hourly=temperature_1000hPa,dew_point_1000hPa&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "current",
+									"value": "temperature_1000hPa,dew_point_1000hPa"
+								},
+								{
+									"key": "hourly",
+									"value": "temperature_1000hPa,dew_point_1000hPa"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "temperature_975hPa, dew_point_975hPa ~ 300-400m above sea level",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&current=temperature_975hPa,dew_point_975hPa&hourly=temperature_975hPa,dew_point_975hPa&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "current",
+									"value": "temperature_975hPa,dew_point_975hPa"
+								},
+								{
+									"key": "hourly",
+									"value": "temperature_975hPa,dew_point_975hPa"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Precipitation",
+			"item": [
+				{
+					"name": "Sum of daily precipitation (including rain, showers and snowfall)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=precipitation&daily=precipitation_sum&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "precipitation"
+								},
+								{
+									"key": "daily",
+									"value": "precipitation_sum"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total precipitation (rain, showers, snow) sum of the preceding hour",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=precipitation&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "precipitation"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wind",
+			"item": [
+				{
+					"name": "Wing speed (km/h), direction (°, azimuth direction), gusts(m/s) 10m above ground",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m&forecast_days=1&timezone=Europe/Kyiv&wind_speed_unit=ms",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "wind_speed_10m,wind_direction_10m,wind_gusts_10m"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								},
+								{
+									"key": "wind_speed_unit",
+									"value": "ms"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wing speed (km/h), direction (°, azimuth direction) 80m above ground",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=wind_speed_80m,wind_direction_80m&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "wind_speed_80m,wind_direction_80m"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wing speed (km/h), direction (°, azimuth direction) 120m above ground",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=wind_speed_120m,wind_direction_120m&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "wind_speed_120m,wind_direction_120m"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wing speed (km/h), direction (°, azimuth direction) 180m above ground",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=wind_speed_180m,wind_direction_180m&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "wind_speed_180m,wind_direction_180m"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cloudcover",
+			"item": [
+				{
+					"name": "Cloudcover (%), cloudcover_low - up to 3 km altitude, cloudcover_mid - from 3 to 8 km altitude, cloudcover_high - from 8 km altitude",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=cloud_cover,cloud_cover_low,cloud_cover_mid,cloud_cover_high&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "cloud_cover,cloud_cover_low,cloud_cover_mid,cloud_cover_high"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visibility",
+			"item": [
+				{
+					"name": "Visibility (Viewing distance in meters. Influenced by low clouds, humidity and aerosols)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=visibility&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "visibility"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UV index",
+			"item": [
+				{
+					"name": "UV index (the level of ultraviolet radiation on the earth's surface)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=uv_index&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "uv_index"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pressure MSL",
+			"item": [
+				{
+					"name": "Atmospheric air pressure reduced to mean sea level (msl) or pressure at surface (hPa)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=pressure_msl&forecast_days=1&timezone=Europe/Kyiv",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "pressure_msl"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WeatherCode",
+			"item": [
+				{
+					"name": "Weather condition as a numeric code (WMO code)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=48.5756&longitude=37.8233&hourly=temperature_2m,dew_point_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation,weather_code,cloud_cover,cloud_cover_low,cloud_cover_mid,cloud_cover_high,visibility,uv_index,pressure_msl&timezone=Europe/Kyiv&forecast_days=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "48.5756"
+								},
+								{
+									"key": "longitude",
+									"value": "37.8233"
+								},
+								{
+									"key": "hourly",
+									"value": "temperature_2m,dew_point_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation,weather_code,cloud_cover,cloud_cover_low,cloud_cover_mid,cloud_cover_high,visibility,uv_index,pressure_msl"
+								},
+								{
+									"key": "timezone",
+									"value": "Europe/Kyiv"
+								},
+								{
+									"key": "forecast_days",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
