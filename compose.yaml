@@ -7,16 +7,12 @@ services:
       - "5432:5432"
     volumes:
       - pg-data:/var/lib/postgresql/data
-    networks:
-      - droncast
 
   adminer:
     image: adminer
     container_name: droncast_adminer
     ports:
       - 8080:8080
-    networks:
-      - droncast
 
   backend: &app
     image: ${BACKEND_IMAGE}
@@ -31,13 +27,6 @@ services:
       - database
     volumes:
       - ./src:/app/src
-    networks:
-      - droncast
-
-
-networks:
-  droncast:
-    external: true
 
 volumes:
   pg-data: {}

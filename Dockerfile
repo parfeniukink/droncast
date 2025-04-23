@@ -31,4 +31,5 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["gunicorn", "src.config.wsgi:application"]
+ENTRYPOINT ["gunicorn"]
+CMD ["src.config.wsgi:application"]
