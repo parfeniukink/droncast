@@ -3,15 +3,15 @@ from datetime import datetime
 import requests
 from django.utils.timezone import now
 
+from src.config import DATE_TIME_FORMAT, MAX_PRECIPITATION_MM
 from src.config.celery import app
-from src.core.constants import DATE_TIME_FORMAT, MAX_PRECIPITATION_MM
 from src.core.coordinates_utils import generate_coordinates_within_radius
 from src.core.models import WeatherLocation
 
 
 @app.task()
 def check_weather_for_all_locations():
-    locations = WeatherLocation.objects.filter(flight_time__gt=datetime.now())
+    locations = WeatherLocation.objects.filter(flight_time__gt=now())
 
     for location in locations:
         if now() >= location.flight_time:
