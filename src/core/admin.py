@@ -3,13 +3,12 @@ from django.contrib import admin
 from django.core.exceptions import ValidationError
 
 from src.config.celery import app
-from src.core.models import WeatherLocation
+from src.core.models import Point
+from src.core.tasks import check_weather_for_location
 
-from .tasks import check_weather_for_location
 
-
-@admin.register(WeatherLocation)
-class WeatherLocationAdmin(admin.ModelAdmin):
+@admin.register(Point)
+class PointAdmin(admin.ModelAdmin):
     list_display = (
         "id",
         "latitude",
@@ -26,7 +25,7 @@ class WeatherLocationAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
         if not change:
-            # Launch Celery task after creating a new WeatherLocation
+            # Launch Celery task after creating a new Point
             check_weather_for_location.apply_async(
                 kwargs={"location_id": obj.id},
                 task_id=str(obj.id),
