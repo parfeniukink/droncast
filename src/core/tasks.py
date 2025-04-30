@@ -1,9 +1,10 @@
 from datetime import datetime
 
 import requests
+from django.conf import settings
 from django.utils.timezone import now
 
-from src.config import DATE_TIME_FORMAT, MAX_PRECIPITATION_MM
+from src.config import DATE_TIME_FORMAT
 from src.config.celery import app
 from src.core.coordinates_utils import generate_coordinates_within_radius
 from src.core.models import WeatherLocation
@@ -64,7 +65,7 @@ def check_weather_for_location(location_id):
         )
 
         if matching_precipitation is not None:
-            if matching_precipitation >= MAX_PRECIPITATION_MM:
+            if matching_precipitation >= settings.DC_MAX_PRECIPITATION_MM:
                 is_good_weather_overall = False
                 print(
                     f"!!! Bad weather! Big amount of precipitations!!! {matching_precipitation}"  # noqa

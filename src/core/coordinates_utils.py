@@ -63,7 +63,6 @@ def generate_coordinates_within_radius(lat, lon, radius_km):
     return coords
 
 
-# fmt: off
 def haversine_distance(lat1, lon1, lat2, lon2):
     """
     Calculates the distance between two points on the Earth in kilometers.
