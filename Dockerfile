@@ -31,5 +31,4 @@ COPY . .
 
 EXPOSE 8000
 
-ENTRYPOINT ["gunicorn"]
-CMD ["src.config.wsgi:application"]
+CMD ["sh", "-c", "python manage.py collectstatic --noinput && gunicorn src.config.wsgi:application"]

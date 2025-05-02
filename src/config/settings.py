@@ -51,7 +51,7 @@ if not SECRET_KEY:
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0", "localhost"]
+ALLOWED_HOSTS = ["0.0.0.0", "localhost", "127.0.0.1"]
 
 
 INSTALLED_APPS = [
@@ -61,6 +61,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "src.core.apps.CoreConfig",
+    "django_admin_geomap",
 ]
 
 MIDDLEWARE = [
@@ -117,12 +119,22 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Kyiv"
 
 USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CELERY_BROKER_URL = os.getenv("DC_CELERY_BROKER_URL", "redis://redis:6379/0")
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_ACCEPT_CONTENT = ["json"]
+
+DC_WEATHER_CHECK_INTERVAL = os.getenv("DC_WEATHER_CHECK_INTERVAL", 10)
+DC_MAX_PRECIPITATION_MM = float(os.getenv("DC_MAX_PRECIPITATION_MM", 5))
