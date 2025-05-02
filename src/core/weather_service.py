@@ -40,7 +40,7 @@ class WeatherForecastService:
             matching_precipitation is not None
             and matching_precipitation >= settings.DC_MAX_PRECIPITATION_MM
         ):
-            print(
+            print(  # TODO: change for notification
                 f"!!! Bad weather! Big amount of precipitations!!! {matching_precipitation}"  # noqa
             )
             return False

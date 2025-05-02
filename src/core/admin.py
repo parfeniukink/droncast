@@ -1,14 +1,20 @@
 from celery.exceptions import CeleryError
 from django.contrib import admin
 from django.core.exceptions import ValidationError
+from django_admin_geomap import ModelAdmin
 
 from src.config.celery import app
-from src.core.models import Point
+from src.core.models import Point, WeatherCheckResult
 from src.core.tasks import check_weather_for_location
 
 
+class WeatherCheckResultInline(admin.TabularInline):
+    model = WeatherCheckResult
+    extra = 0
+
+
 @admin.register(Point)
-class PointAdmin(admin.ModelAdmin):
+class PointAdmin(ModelAdmin):
     list_display = (
         "id",
         "latitude",
@@ -18,6 +24,10 @@ class PointAdmin(admin.ModelAdmin):
         "created_by",
     )
     readonly_fields = ("created_by",)
+    inlines = [WeatherCheckResultInline]
+
+    geomap_field_longitude = "longitude"
+    geomap_field_latitude = "latitude"
 
     def save_model(self, request, obj, form, change):
         if not change:

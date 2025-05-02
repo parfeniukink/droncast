@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.utils.timezone import now
 
 from src.config.celery import app
-from src.core.models import Point
+from src.core.models import Point, WeatherCheckResult
 
 
 @app.task()
@@ -19,4 +19,16 @@ def check_weather_for_all_locations():
 def check_weather_for_location(location_id):
     location = get_object_or_404(Point, id=location_id)
 
-    return location.predict_weather()
+    result = location.predict_weather()
+    if result is None:
+        return
+
+    flight_weather, non_flight_reason = result
+
+    WeatherCheckResult.objects.create(
+        point=location,
+        flight_weather=flight_weather,
+        non_flight_reason=non_flight_reason,
+    )
+
+    return flight_weather
